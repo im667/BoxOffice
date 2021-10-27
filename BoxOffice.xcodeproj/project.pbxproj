@@ -13,6 +13,11 @@
 		0441899E2729A3BF00E30ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0441899C2729A3BF00E30ADD /* Main.storyboard */; };
 		044189A02729A3C200E30ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0441899F2729A3C200E30ADD /* Assets.xcassets */; };
 		044189A32729A3C200E30ADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044189A12729A3C200E30ADD /* LaunchScreen.storyboard */; };
+		044189AB2729A44100E30ADD /* BoxAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044189AA2729A44100E30ADD /* BoxAPIManager.swift */; };
+		044189AE2729A49200E30ADD /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 044189AD2729A49200E30ADD /* SwiftyJSON */; };
+		044189B12729A49E00E30ADD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 044189B02729A49E00E30ADD /* Alamofire */; };
+		044189B32729ABF800E30ADD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044189B22729ABF800E30ADD /* TableViewCell.swift */; };
+		044189B52729B11900E30ADD /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044189B42729B11900E30ADD /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,9 @@
 		0441899F2729A3C200E30ADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044189A22729A3C200E30ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044189A42729A3C200E30ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044189AA2729A44100E30ADD /* BoxAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxAPIManager.swift; sourceTree = "<group>"; };
+		044189B22729ABF800E30ADD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		044189B42729B11900E30ADD /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044189AE2729A49200E30ADD /* SwiftyJSON in Frameworks */,
+				044189B12729A49E00E30ADD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +69,10 @@
 				044189962729A3BF00E30ADD /* AppDelegate.swift */,
 				044189982729A3BF00E30ADD /* SceneDelegate.swift */,
 				0441899A2729A3BF00E30ADD /* ViewController.swift */,
+				044189B42729B11900E30ADD /* MovieModel.swift */,
+				044189AA2729A44100E30ADD /* BoxAPIManager.swift */,
 				0441899C2729A3BF00E30ADD /* Main.storyboard */,
+				044189B22729ABF800E30ADD /* TableViewCell.swift */,
 				0441899F2729A3C200E30ADD /* Assets.xcassets */,
 				044189A12729A3C200E30ADD /* LaunchScreen.storyboard */,
 				044189A42729A3C200E30ADD /* Info.plist */,
@@ -83,6 +96,10 @@
 			dependencies = (
 			);
 			name = BoxOffice;
+			packageProductDependencies = (
+				044189AD2729A49200E30ADD /* SwiftyJSON */,
+				044189B02729A49E00E30ADD /* Alamofire */,
+			);
 			productName = BoxOffice;
 			productReference = 044189932729A3BF00E30ADD /* BoxOffice.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,10 @@
 				Base,
 			);
 			mainGroup = 0441898A2729A3BF00E30ADD;
+			packageReferences = (
+				044189AC2729A49200E30ADD /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				044189AF2729A49E00E30ADD /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 044189942729A3BF00E30ADD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044189B52729B11900E30ADD /* MovieModel.swift in Sources */,
+				044189B32729ABF800E30ADD /* TableViewCell.swift in Sources */,
+				044189AB2729A44100E30ADD /* BoxAPIManager.swift in Sources */,
 				0441899B2729A3BF00E30ADD /* ViewController.swift in Sources */,
 				044189972729A3BF00E30ADD /* AppDelegate.swift in Sources */,
 				044189992729A3BF00E30ADD /* SceneDelegate.swift in Sources */,
@@ -360,6 +384,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		044189AC2729A49200E30ADD /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+		044189AF2729A49E00E30ADD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		044189AD2729A49200E30ADD /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 044189AC2729A49200E30ADD /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		044189B02729A49E00E30ADD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 044189AF2729A49E00E30ADD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0441898B2729A3BF00E30ADD /* Project object */;
 }
